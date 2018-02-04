@@ -11,4 +11,4 @@ def blue_eye(x, y):
         for column in range(y[0], y[1]):
             if sum(img[row][column])>500:
                 img[row][column]=[0, 0, 257]
-print 
+                
