@@ -2,9 +2,10 @@ import PIL
 import matplotlib.pyplot as plt
 import os.path  
 import PIL.ImageDraw
+import Image
 
 directory = os.getcwd()
-filepath = os.path.join(directory, )
+image = Image.open(student.jpg).show()
 
 def blue_eye(x, y):
     for row in range(x[0], x[1]):
