@@ -4,7 +4,7 @@ import os.path
 import PIL.ImageDraw
 
 directory = os.getcwd()
-filepath = os.path.join(directory)
+filepath = os.path.join(directory, )
 
 def blue_eye(x, y):
     for row in range(x[0], x[1]):
