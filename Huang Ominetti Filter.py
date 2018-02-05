@@ -2,7 +2,7 @@ import PIL
 import matplotlib.pyplot as plt # single use of plt is commented out
 import os.path  
 import PIL.ImageDraw            
-
+import student.jpeg
 directory = os.getcwd()
 filepath = os.path.join(directory)
 
@@ -12,4 +12,5 @@ def blue_eye(x, y):
             if sum(img[row][column])>500:
                 img[row][column]=[0, 0, 257]
                 
-i
+
+                
