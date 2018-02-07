@@ -20,4 +20,10 @@ def blue_eye():
             img[r][c][2]=img[r][c][1]
     fig.show()
 
-blue_eye()
+def background_change():
+    filename = input("What is the name of the photo?")
+    directory = os.path.dirname(os.path.abspath(__file__))
+    filepath = os.path.join(directory, filename)
+    img = PIL.Image.open(filepath)
+    img.show()
+    
