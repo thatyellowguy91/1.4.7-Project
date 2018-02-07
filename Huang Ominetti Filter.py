@@ -14,7 +14,10 @@ import PIL.ImageDraw
 def blue_eye():
     directory = os.path.dirname(os.path.abspath(__file__))  
     filename = os.path.join(directory, 'student.jpg')
-    img = PIL.Image.open(filename)
+    if isPLT:
+        img = PIL.Image.open(filename)
+    else:
+        img = PIL.Image.open(filepath)
     fig, axes = plt.subplots(1, 1)
     axes.imshow(img)
     for row in range(589, 1388):
