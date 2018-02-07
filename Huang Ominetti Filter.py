@@ -15,11 +15,11 @@ import PIL.ImageDraw
 def blue_eye():
     directory = os.path.dirname(os.path.abspath(__file__))  
     filename = os.path.join(directory, 'student.jpg')
-    student_img = PIL.Image.open(filename)
+    img = PIL.Image.open(filename)
     fig, axes = plt.subplots(1, 1)
-    axes.imshow(student_img)
-    for row in range(500, 500):
-        for column in range(500, 500):
+    axes.imshow(img)
+    for row in range(589, 1388):
+        for column in range(883,1090):
             img[row][column]=[0, 0, 255]
     fig.show()
 
