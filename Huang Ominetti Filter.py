@@ -12,16 +12,12 @@ import PIL.ImageDraw
 
 #imports the image
 def blue_eye():
-    isPLT = input("Is the image a PLT image?")
     directory = os.path.dirname(os.path.abspath(__file__))  
-    filename = os.path.join(directory, 'student.jpg')
-    if isPLT == "True":
-        img = PIL.Image.open(filename)
-    else:
-        img = PIL.Image.open(directory)
-    for row in range(589, 1388):
-        for column in range(883,1090):
-            img[row][column]=[0, 0, 255]
+    img = PIL.Image.open(directory, 'student.jpg')
+    axes.imshow(img)
+    for r in range(589, 1388):
+        for c in range(883,1090):
+            img[r][c][2]
     fig.show()
 
 blue_eye()
