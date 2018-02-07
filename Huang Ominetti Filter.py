@@ -15,7 +15,14 @@ def background_change():
     filename = input("What is the name of the photo?")
     directory = os.path.dirname(os.path.abspath(__file__))
     filepath = os.path.join(directory, filename)
-    img = PIL.Image.open(filepath)
+    img = plt.imread(filepath)
+    fig, ax = plt.subplots(1, 1)
+    height = len(img)
+    width = len(img[0])
+    for r in range(150,150):
+        for c in range(150,150):
+            img[r][c][157,157,157]
+    img = PIL.Image.fromarray(img)
     #displays the image
     img.show()
     
