@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 '''Eye Color Filter
+
     by Lawrence Huang and Christian Ominetti
     
-                                                '''
+                                            '''
         
 #importing necessary libraries
 import PIL
@@ -22,6 +23,7 @@ def background_change():
     for r in range(150,150):
         for c in range(150,150):
             img[r][c][157,157,157]
+    #converts from numpy ndarry to PIL image
     img = PIL.Image.fromarray(img)
     #displays the image
     img.show()
