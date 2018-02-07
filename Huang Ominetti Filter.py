@@ -20,11 +20,9 @@ def background_change():
     fig, ax = plt.subplots(1, 1)
     height = len(img)
     width = len(img[0])
-    for r in range(150,150):
-        for c in range(150,150):
-            img[r][c][157,157,157]
-    #converts from numpy ndarry to PIL image
-    img = PIL.Image.fromarray(img)
+    for r in range(604,1351):
+        for c in range(883,1046):
+            img[r][c][2]
     #displays the image
-    img.show()
-    
+    ax.imshow(img, interpolation = 'none')
+    fig.show()
