@@ -17,7 +17,7 @@ def blue_eye():
     axes.imshow(img)
     for r in range(589, 1388):
         for c in range(883,1090):
-            img[r][c][2]
+            img[r][c][2]=img[r][c][1]
     fig.show()
 
 blue_eye()
