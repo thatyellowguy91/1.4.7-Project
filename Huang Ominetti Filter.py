@@ -9,15 +9,18 @@ import matplotlib.pyplot as plt
 import os.path  
 import PIL.ImageDraw
 
-directory = os.getcwd()
-image_list = []
-file_list = []
+directory = os.path.dirname(os.path.abspath(__file__))  
+filename = os.path.join(directory, 'student.jpg')
+student_img = PIL.Image.open(filename)
+fig, axes = plt.subplots(1, 1)
+axes.imshow(student_img, interpolation='none')
+fig.show()
 
 def blue_eye():
-    tlc = int(input("Please enter the first set of coordinates for the eye locations."))
-    brc = int(input("Please enter the second set of coordinates for the eye location."))
-    for row in range(tlc[0], brc[0]):
-        for column in range(tlc[1], brc[1]):
+    for row in range(50, 50):
+        for column in range(50, 50):
+            
                 img[row][column]=[0, 0, 255]
+    fig.show()
 
-print("Please enter coordinates in list form when prompted.  Enter 'blue_eye()' to begin.")
+blue_eye()
