@@ -1,3 +1,9 @@
+'''Eye Color Filter
+
+    by Lawrence Huang and Christian Ominetti
+    
+    '''
+#importing necessary libraries
 import PIL
 import matplotlib.pyplot as plt
 import os.path  
