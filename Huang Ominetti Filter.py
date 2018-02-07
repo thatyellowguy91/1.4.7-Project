@@ -22,7 +22,7 @@ def background_change():
     width = len(img[0])
     for r in range(604,1351):
         for c in range(883,1046):
-            img[r][c][2]
+            img[r][c][0,255,255]
     #displays the image
     ax.imshow(img, interpolation = 'none')
     fig.show()
