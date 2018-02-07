@@ -18,8 +18,8 @@ def blue_eye():
     student_img = PIL.Image.open(filename)
     fig, axes = plt.subplots(1, 1)
     axes.imshow(student_img)
-    for row in range(50, 50):
-        for column in range(50, 50):
+    for row in range(500, 500):
+        for column in range(500, 500):
             img[row][column]=[0, 0, 255]
     fig.show()
 
