@@ -21,9 +21,15 @@ def background_change():
     fig, ax = plt.subplots(1, 1)
     height = len(img)
     width = len(img[0])
+<<<<<<< HEAD
     for row in range(604,1351):
         for column in range(883,1046):
             img[row][column][0,255,255]
+=======
+    for r in range(604,1351):
+        for c in range(883,1046):
+            img[r][c][2]
+>>>>>>> parent of 6c0d574... Bob's big burgers
     #displays the image
     ax.imshow(img, interpolation = 'none')
     fig.show()
