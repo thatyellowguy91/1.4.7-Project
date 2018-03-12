@@ -1,5 +1,5 @@
+# -*- coding: utf-8 -*-
 '''Eye Color Filter
-
     by Lawrence Huang and Christian Ominetti
     
                                             '''
@@ -10,7 +10,7 @@ import os.path
 import PIL.ImageDraw
 
 directory = os.getcwd()
-image = PIL.Image.open(directory)
+img = open('student.jpg')
 
 def blue_eye(x, y):
     for row in range(x[0], x[1]):
