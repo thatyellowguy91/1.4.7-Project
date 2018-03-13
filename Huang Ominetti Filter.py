@@ -10,7 +10,7 @@ import os.path
 import PIL.ImageDraw
 
 directory = os.getcwd()
-img = plt.imread('student.jpg')
+imgarray = PIL.image.open('student.jpg')
 
 def blue_eye(x, y):
     for row in range(x[0], x[1]):
@@ -20,4 +20,3 @@ def blue_eye(x, y):
     fig, ax = plt.subplots(1, 1)
     fig.show()
 
-    
