@@ -23,7 +23,7 @@ def colour(orig):
     for r in range(height): 	#set up nested loop
         for c in range(width):
             if sum(img[r][c])<100: #test for if sum of RGB values in selected area is less than 100
-                img[r][c] = [2,255,255]
+                img[r][c] = [0,0,255]
             img[r][c]=[sum(img[r][c])/3] #takes the sum of the RGB values in the selected area, divided by three
     ax.set_axis_off() #hides the axes			
     ax.imshow(img, interpolation='none')
