@@ -36,5 +36,5 @@ def color(orig):
     ax.imshow(img, interpolation='none')
     fig.savefig('temp.jpg') #save as .jpg file
     result = os.path.join(directory, 'temp.jpg') #sets the new file as result
-    imag = PIL.Image.open(result) #opens the image using PIL
-    return imag #allows file to be saved into folder
+    img = PIL.Image.open(result) #opens the image using PIL
+    img.show() #allows file to be saved into folder
