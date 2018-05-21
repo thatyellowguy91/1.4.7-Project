@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-'''Eye Color Filter
+'''Color Filter
 
     by Lawrence Huang and Christian Ominetti
     
