@@ -19,7 +19,7 @@ def paste_item(firstimg):
     firstimg.paste(img,(100,100)) #paste newimage at (100,100) on original image
     return firstimg
 
-def color(orig):
+def colour(orig):
     i = orig #set variable for image
     directory = os.path.dirname(os.path.abspath(__file__)) #set path of directory
     File = os.path.join(directory, i) #set the directory to a specific file
