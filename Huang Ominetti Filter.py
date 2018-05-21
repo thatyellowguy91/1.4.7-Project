@@ -12,20 +12,10 @@ import os.path
 import PIL.ImageDraw
 import numpy as np
 
-def paste_item(x,y):
-    #locates and imports the image
-    #prompts decide which is base image and which is pasted
-    filename = input("What is the name of the photo?")
+def paste_item(firstimg):
     directory = os.path.dirname(os.path.abspath(__file__))
-    filepath = os.path.join(directory, filename)
-    img = plt.imread(filepath)
-    #locates and imports a second image
-    filename2 = input("What is the name of the image to paste on top?")
-    directory2 = os.path.dirname(os.path.abspath(__file__))
-    filepath2 = os.path.join(directory2, filename2)
-    img2 = plt.imread(filepath2)
-    #pastes 2nd image onto the first
-    img.paste(img2,(x,y), mask = img2)
-    #displays the image
-    ax.imshow(img, interpolation = 'none')
-    fig.show()
+    otherfile = os.path.join(directory, 'student.jpg') #selects the file
+    img = PIL.Image.open(otherfile) #opens new image
+    img.resize((30,30)) #resize new image
+    firstimg.paste(img, (100,100)) #paste newimage at (100,100) on original image
+    return firstimg
