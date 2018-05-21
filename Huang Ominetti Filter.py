@@ -3,7 +3,7 @@
 
     by Lawrence Huang and Christian Ominetti
     
-                                            '''
+                                    '''
         
 #importing necessary libraries
 import PIL
@@ -11,13 +11,6 @@ import matplotlib.pyplot as plt
 import os.path  
 import PIL.ImageDraw
 import numpy as np
-
-def paste_item(firstimg):
-    directory = os.path.dirname(os.path.abspath(__file__))
-    otherfile = os.path.join(directory, 'earth.png') #selects the file
-    img = PIL.Image.open(otherfile) #opens new image
-    firstimg.paste(img,(100,100)) #paste newimage at (100,100) on original image
-    return firstimg
 
 def colour(orig):
     i = orig #set variable for image
@@ -30,7 +23,7 @@ def colour(orig):
     for r in range(height): 	#set up nested loop
         for c in range(width):
             if sum(img[r][c])<100: #test for if sum of RGB values in selected area is less than 100
-                img[r][c] = [20,0,0]
+                img[r][c] = [2,255,255]
             img[r][c]=[sum(img[r][c])/3] #takes the sum of the RGB values in the selected area, divided by three
     ax.set_axis_off() #hides the axes			
     ax.imshow(img, interpolation='none')
