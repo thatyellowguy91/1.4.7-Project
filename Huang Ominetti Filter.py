@@ -14,8 +14,9 @@ import numpy as np
 
 def paste_item(firstimg):
     directory = os.path.dirname(os.path.abspath(__file__))
-    otherfile = os.path.join(directory, 'student.jpg') #selects the file
+    otherfile = os.path.join(directory, 'earth.png') #selects the file
     img = PIL.Image.open(otherfile) #opens new image
     img.resize((30,30)) #resize new image
     firstimg.paste(img,(100,100)) #paste newimage at (100,100) on original image
-    return firstimg
+    final=firstimg.rotate(360)
+    final.show()
